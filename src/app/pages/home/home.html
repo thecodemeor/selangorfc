@@ -1,0 +1,17 @@
+<app-polkadots-background></app-polkadots-background>
+<app-logo-particles></app-logo-particles>
+
+<section class="partners-slider"
+    (mouseenter)="onSliderEnter()"
+    (mouseleave)="onSliderLeave()">
+    <div class="partners-track" #partnersTrack>
+        @for (partner of duplicatedPartners; track $index) {
+            <div class="partner-item">
+                <img
+                    [src]="'assets/images/partners/' + partner.name + '.png'"
+                    [alt]="partner.name"
+                />
+            </div>
+        }
+    </div>
+</section>
